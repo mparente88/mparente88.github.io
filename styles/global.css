@@ -20,6 +20,9 @@ a:hover {
 nav {
   background-color: #212121;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav ul {
@@ -40,8 +43,15 @@ nav ul li a {
   transition: color 0.3s;
 }
 
+nav ul li a.active,
 nav ul li a:hover {
-  color: #1a73e8;
+  color: #f0a500;
+  border-bottom: 2px solid #f0a500;
+  text-decoration: none;
+}
+
+.section {
+  padding: 4rem 2rem;
 }
 
 /* Hero Section */
@@ -55,6 +65,18 @@ nav ul li a:hover {
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero button {
@@ -66,11 +88,12 @@ nav ul li a:hover {
   color: #1a73e8;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .hero button:hover {
   background-color: #f1f1f1;
+  transform: translateY(-3px);
 }
 
 /* About Section */
@@ -88,6 +111,19 @@ nav ul li a:hover {
 .profile-img:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (max-width: 768) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 /* Projects Section */
@@ -113,6 +149,55 @@ nav ul li a:hover {
   transform: translateY(-5px);
 }
 
+.project-card a {
+  color: #1a73e8;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.project-card a:hover {
+  color: #f0a500;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Contact Section */
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #1a73e8;
+  outline: none;
+}
+
+.btn {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #0f5bbf;
+  transform: translateY(-2px);
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -128,4 +213,17 @@ footer a {
 
 footer a:hover {
   color: #4285f4;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 0.5rem;
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+  color: #f0a500;
+  transform: scale(1.1);
 }
