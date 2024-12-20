@@ -1,23 +1,22 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import dynamic from "next/dynamic"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
-import Hero from "./Hero"
-import About from "./About"
-import Projects from "./Projects"
-import Contact from "./Contact"
+
+const Hero = dynamic(() => import("./Hero"))
+const About = dynamic(() => import("./About"))
+const Projects = dynamic(() => import("./Projects"))
+const Contact = dynamic(() => import("./Contact"))
 
 function App() {
   return (
-    <Router>
+    <div>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <main>
+        {}
+        <Hero />
+      </main>
       <Footer />
-    </Router>
+    </div>
   )
 }
 

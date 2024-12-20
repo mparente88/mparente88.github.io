@@ -1,19 +1,7 @@
-import Navbar from "../components/Navbar"
-import Hero from "../components/Hero"
-import About from "../components/About"
-import Projects from "../components/Projects"
-import Contact from "../components/Contact"
-import Footer from "../components/Footer"
+import dynamic from "next/dynamic"
 
-export default function Home() {
-  return (
-    <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Contact />
-      <Footer />
-    </>
-  )
+const Hero = dynamic(() => import("../components/Hero"))
+
+export default function HomePage() {
+  return <Hero />
 }
