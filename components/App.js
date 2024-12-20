@@ -6,6 +6,7 @@ const Hero = dynamic(() => import("./Hero"))
 const About = dynamic(() => import("./About"))
 const Projects = dynamic(() => import("./Projects"))
 const Contact = dynamic(() => import("./Contact"))
+const Wave = dynamic(() => import("./wave"))
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         {}
         <Hero />
       </main>
+      <Wave />
       <Footer />
     </div>
   )

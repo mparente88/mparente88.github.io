@@ -1,4 +1,5 @@
 import { useRouter } from "next/router"
+import Wave from "./Wave"
 
 export default function Hero() {
   const router = useRouter()
@@ -11,6 +12,7 @@ export default function Hero() {
         <button onClick={() => router.push("/projects")}>View Projects</button>
         <button onClick={() => router.push("/contact")}>Contact Me</button>
       </div>
+      <Wave />
     </section>
   )
 }
