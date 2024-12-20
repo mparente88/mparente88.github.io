@@ -15,7 +15,7 @@ export default function Endorsements() {
         {endorsements.map((endorsement, index) => (
           <SwiperSlide key={index}>
             <div className="endorsement-card">
-              <p>"{endorsement.feedback}"</p>
+              <p>&quot;{endorsement.feedback}&quot;</p>
               <h4>- {endorsement.name}</h4>
             </div>
           </SwiperSlide>
