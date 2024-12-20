@@ -1,11 +1,15 @@
+import { useRouter } from "next/router"
+
 export default function Hero() {
+  const router = useRouter()
+
   return (
-    <section className="hero section">
-      <h1>Molly Parente</h1>
+    <section className="hero">
+      <h1>Hi, I&apos;m Molly</h1>
       <p>A Software Engineer passionate about creating efficient, user-centric applications.</p>
-      <div className="hero-buttons">
-        <button>View Projects</button>
-        <button>Contact Me</button>
+      <div>
+        <button onClick={() => router.push("/projects")}>View Projects</button>
+        <button onClick={() => router.push("/contact")}>Contact Me</button>
       </div>
     </section>
   )
