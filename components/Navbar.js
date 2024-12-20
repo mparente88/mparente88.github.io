@@ -30,6 +30,15 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
+          <Link href="/endorsements">
+            <div className="nav-item">
+              <Image src="/friend.gif" alt="Endorsements" unoptimized width={50} height={50} />
+              <span className="tooltip">Endorsements</span>
+            </div>
+          </Link>
+        </li>
+
+        <li>
           <Link href="/contact">
             <div className="nav-item">
               <Image src="/contact.gif" alt="Contact" unoptimized width={50} height={50} />
