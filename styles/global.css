@@ -374,6 +374,12 @@ footer {
   text-align: center;
 }
 
+.endorsement-title {
+  font-style: italic;
+  color: var(--accent-color-dark);
+  margin-top: 0.5rem;
+}
+
 .endorsement-card {
   background-color: var(--background-color-dark);
   color: var(--text-color-dark);
