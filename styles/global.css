@@ -314,7 +314,6 @@ textarea:focus {
   border-radius: 4px;
   font-size: 0.9rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
 }
 
 .technologies li:hover {

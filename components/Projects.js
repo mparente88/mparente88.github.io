@@ -38,7 +38,7 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div key={index} className="project-card">
             <div className="project-image">
-              <Image src={project.image} alt={project.title} width={200} height={150} layout="intrinsic" quality={90} priority={index === 0} />
+              <Image src={project.image} alt={project.title} width={200} height={150} quality={90} priority={index === 0} />
             </div>
             <div className="project-details">
               <h3>{project.title}</h3>
