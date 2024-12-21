@@ -27,7 +27,7 @@ export default function Projects() {
       tags: ["Backend", "Interactive"],
       image: "/loom_logo.jpeg",
       github: "https://github.com/mparente88/loom-companion-app",
-      demo: "https://loom-demo.com",
+      demo: "https://loom-app-621309c042dd.herokuapp.com/",
     },
   ]
 
