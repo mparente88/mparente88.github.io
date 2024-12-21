@@ -476,3 +476,51 @@ footer {
     font-size: 0.875rem;
   }
 }
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: var(--accent-color-dark);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--accent-color-dark-hover);
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.about-details {
+  max-width: 800px;
+}
+
+.skills-list,
+.fun-facts {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.skills-list li,
+.fun-facts li {
+  background: var(--accent-color-dark);
+  color: var(--text-color-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
