@@ -11,7 +11,14 @@ export default function Endorsements() {
   return (
     <section id="endorsements" className="endorsements section">
       <h2>Endorsements</h2>
-      <Swiper spaceBetween={50} slidesPerView={3}>
+      <Swiper
+        spaceBetween={30}
+        breakpoints={{
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+      >
         {endorsements.map((endorsement, index) => (
           <SwiperSlide key={index}>
             <div className="endorsement-card">

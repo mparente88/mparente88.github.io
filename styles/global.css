@@ -1,22 +1,50 @@
 :root {
+  /* Colors */
   --primary-color: #1a73e8;
   --secondary-color: #4285f4;
   --accent-color: #20c997;
   --accent-color-hover: #38d9a9;
   --background-color-light: #f7f8fa;
   --text-color-light: #333;
-
-  /* Dark Mode Variables */
   --background-color-dark: #121212;
   --text-color-dark: #e0e0e0;
   --accent-color-dark: #23ab82;
   --accent-color-dark-hover: #34b48d;
+
+  /* Typography */
+  --font-family: "Inter", sans-serif;
+  --font-size-small: 0.875rem; /* 14px */
+  --font-size-regular: 1rem; /* 16px */
+  --font-size-medium: 1.25rem; /* 20px */
+  --font-size-large: 1.5rem; /* 24px */
+  --font-size-xlarge: 2rem; /* 32px */
+  --line-height-small: 1.4;
+  --line-height-regular: 1.6;
 }
 
+/* Global Styles */
 body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-regular);
+  line-height: var(--line-height-regular);
   background-color: var(--background-color-dark);
   color: var(--text-color-dark);
   transition: background-color 0.3s, color 0.3s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+p {
+  margin: 0 0 1rem 0;
+  font-size: var(--font-size-regular);
 }
 
 a {
@@ -32,13 +60,47 @@ a:hover {
   padding: 4rem 2rem;
 }
 
+/* Accessibility */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+.text-light {
+  color: var(--text-color-light);
+}
+
+.text-dark {
+  color: var(--text-color-dark);
+}
+
+.bg-light {
+  background-color: var(--background-color-light);
+}
+
+.bg-dark {
+  background-color: var(--background-color-dark);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Navbar Section */
 .nav {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--background-color-dark);
-  padding: 1rem;
+  padding: 1rem 2rem;
 }
 
 .nav-list {
@@ -76,6 +138,12 @@ a:hover {
   animation: bounce 0.3s ease-in-out;
 }
 
+.nav-item {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
 .nav-item.active {
   transform: scale(1.1);
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
@@ -86,22 +154,6 @@ a:hover {
 .nav-item.active .tooltip {
   background-color: var(--accent-color-dark);
   color: var(--text-color-dark);
-}
-
-@keyframes bounce {
-  0%,
-  100% {
-    transform: scale(1.1) translateY(0);
-  }
-  50% {
-    transform: scale(1.1) translateY(-5px);
-  }
-}
-
-.nav-item {
-  position: relative;
-  display: inline-block;
-  text-align: center;
 }
 
 .tooltip {
@@ -128,16 +180,26 @@ a:hover {
   transform: translateX(-50%) translateY(10px);
 }
 
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(1.1) translateY(0);
+  }
+  50% {
+    transform: scale(1.1) translateY(-5px);
+  }
+}
+
 /* Hero Section */
 .hero {
-  background: var(--background-color-dark);
-  color: var(--text-color-dark);
-  padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 4rem 2rem;
   height: 100vh;
+  background: var(--background-color-dark);
+  color: var(--text-color-dark);
 }
 
 .hero h1 {
@@ -163,7 +225,6 @@ a:hover {
 }
 
 /* Projects Section */
-/* Projects Section */
 .projects {
   padding: 4rem 2rem;
   background-color: #1e1e1e;
@@ -183,10 +244,11 @@ a:hover {
   background: var(--background-color-dark);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
   overflow: hidden;
   width: 90%;
   max-width: 800px;
+  margin: auto;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
@@ -302,6 +364,58 @@ a:hover {
 footer {
   text-align: center;
   padding: 2rem 1rem;
-  background-color: #212121;
+  background-color: var(--background-color-dark);
   color: var(--text-color-dark);
+}
+
+/* Endorsements */
+.endorsements {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.endorsement-card {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.endorsement-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Spinner */
+.spinner-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.spinner {
+  border: 8px solid rgba(255, 255, 255, 0.3);
+  border-top: 8px solid var(--primary-color);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
