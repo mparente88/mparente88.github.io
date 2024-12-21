@@ -5,7 +5,7 @@ export default function Endorsements() {
   const endorsements = [
     {
       name: "Jeremy Taubman",
-      title: "Full-Stack Web Developer",
+      title: "Senior Software Engineer",
       feedback: "I cannot recommend her enough for any position in tech. Do not miss the chance to have someone this strong working on your side.",
     },
     {
