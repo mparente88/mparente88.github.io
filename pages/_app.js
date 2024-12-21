@@ -1,3 +1,4 @@
+import Head from "next/head"
 import "../styles/global.css"
 import Layout from "../components/Layout"
 import { useState, useEffect } from "react"
@@ -23,13 +24,26 @@ export default function MyApp({ Component, pageProps }) {
   }, [router])
 
   return (
-    <Layout>
-      {isLoading && (
-        <div className="spinner-container">
-          <div className="spinner"></div>
-        </div>
-      )}
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <Head>
+        <title>Molly Parente - Software Engineer</title>
+        <meta name="description" content="Portfolio of Molly Parente, showcasing skills, projects, and testimonials." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Molly Parente - Software Engineer" />
+        <meta property="og:description" content="Portfolio of Molly Parente, highlighting projects and expertise." />
+        <meta property="og:image" content="/og-image.png" />
+        <meta property="og:url" content="https://yourportfolio.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Layout>
+        {isLoading && (
+          <div className="spinner-container">
+            <div className="spinner"></div>
+          </div>
+        )}
+        <Component {...pageProps} />
+      </Layout>
+    </>
   )
 }
