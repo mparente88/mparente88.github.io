@@ -3,9 +3,16 @@ import "swiper/css"
 
 export default function Endorsements() {
   const endorsements = [
-    { name: "John Doe", feedback: "Molly is an outstanding engineer!" },
-    { name: "Jane Smith", feedback: "Working with Molly was a pleasure, very skilled!" },
-    { name: "Alan Turing", feedback: "A natural problem-solver and creative thinker." },
+    {
+      name: "Jeremy Taubman",
+      title: "Full-Stack Web Developer",
+      feedback: "I cannot recommend her enough for any position in tech. Do not miss the chance to have someone this strong working on your side.",
+    },
+    {
+      name: "Ashley Sands",
+      title: "Instructor at General Assembly",
+      feedback: "Molly has an exceptional ability to grasp concepts quickly. She regularly went beyond the curriculum, pushing herself to deepen her understanding and explore related areas.",
+    },
   ]
 
   return (
@@ -24,6 +31,7 @@ export default function Endorsements() {
             <div className="endorsement-card">
               <p>&quot;{endorsement.feedback}&quot;</p>
               <h4>- {endorsement.name}</h4>
+              {endorsement.title && <p className="endorsement-title">{endorsement.title}</p>}
             </div>
           </SwiperSlide>
         ))}
