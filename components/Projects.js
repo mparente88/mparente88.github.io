@@ -5,7 +5,7 @@ export default function Projects() {
     {
       title: "Chewsy",
       description: "A full-stack meal planning and recipe management application that simplifies weekly meal prep with dynamic shopping lists, customizable recipes, and a user-friendly interface.",
-      technologies: ["Python", "Django", "PostgreSQL"],
+      technologies: ["Python", "Django", "PostgreSQL", "Heroku"],
       tags: ["Full-Stack", "Web App"],
       image: "/chewsy_logo.png",
       github: "https://github.com/mparente88/chewsy-app",
@@ -14,7 +14,7 @@ export default function Projects() {
     {
       title: "Rivals",
       description: "A retro Pokémon game simulation using JavaScript and PokeAPI.",
-      technologies: ["JavaScript", "HTML", "CSS"],
+      technologies: ["JavaScript", "HTML", "CSS", "Surge"],
       tags: ["Frontend", "Game"],
       image: "/rivals_logo.jpeg",
       github: "https://github.com/mparente88/PokemonRivals",
@@ -23,8 +23,8 @@ export default function Projects() {
     {
       title: "Loom",
       description: "An interactive storytelling app built with Node.js, MongoDB, and Express.",
-      technologies: ["Node.js", "Express", "MongoDB"],
-      tags: ["Backend", "Interactive"],
+      technologies: ["Node.js", "Express", "MongoDB", "Heroku"],
+      tags: ["Full-Stack", "Story-Telling"],
       image: "/loom_logo.jpeg",
       github: "https://github.com/mparente88/loom-companion-app",
       demo: "https://loom-app-621309c042dd.herokuapp.com/",

@@ -6,7 +6,7 @@ export default function Endorsements() {
     {
       name: "Jeremy Taubman",
       title: "Senior Software Engineer",
-      feedback: "I cannot recommend her enough for any position in tech. Do not miss the chance to have someone this strong working on your side.",
+      feedback: "In both Front and Back End coding, in styling, planning, and execution, Molly's skills were incredible to see and work with... I cannot recommend her enough for any position in tech. Do not miss the chance to have someone this strong working on your side.",
     },
     {
       name: "Ashley Sands",
