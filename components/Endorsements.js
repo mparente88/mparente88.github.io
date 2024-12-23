@@ -1,5 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Autoplay } from "swiper/modules"
 import "swiper/css"
+import "swiper/css/navigation"
 
 export default function Endorsements() {
   const endorsements = [
@@ -23,6 +25,11 @@ export default function Endorsements() {
       title: "Software Engineer",
       feedback: "Everything she creates is well thought out and considers not just what she would like to do, but how users would try to interact with the site... I would feel relieved knowing I had such a fast learner on my team.",
     },
+    {
+      name: "Sara Searson",
+      title: "Software Engineer",
+      feedback: "She was constantly teaching herself new techniques and technologies... putting herself and her projects above and beyond expectations. She consistently put the most hours into her projects and delivered projects that really pushed the requested technology to the limit of its capabilities.",
+    },
   ]
 
   return (
@@ -30,6 +37,18 @@ export default function Endorsements() {
       <h2>Endorsements</h2>
       <Swiper
         spaceBetween={30}
+        modules={[Navigation, Autoplay]}
+        navigation
+        loop={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: true,
+        }}
+        onAutoplayStop={(swiper) => {
+          if (swiper.autoplay.running) {
+            swiper.autoplay.stop()
+          }
+        }}
         breakpoints={{
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
