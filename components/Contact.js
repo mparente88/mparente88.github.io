@@ -1,8 +1,8 @@
 export default function Contact() {
   return (
     <section id="contact" className="contact section">
-      <h2>Contact Me</h2>
       <form action="https://formspree.io/f/mqakvvqy" method="POST" className="contact-form">
+        <h2>Contact Me</h2>
         <div>
           <label htmlFor="name">Name</label>
           <input type="text" id="name" name="name" className="input" />
