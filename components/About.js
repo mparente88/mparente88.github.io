@@ -5,6 +5,11 @@ export default function About() {
     <section id="about" className="about section">
       <div className="about-container">
         <Image src="/profilePicture.png" alt="Profile" width={150} height={150} className="profile-img" />
+        <span>
+          <a href="/MollyParenteResume.pdf" download className="btn">
+            Download My Resume
+          </a>
+        </span>
         <div className="about-details">
           <h2>About Me</h2>
           <p>Hi! I&apos;m Molly, a software engineer with a background in teaching and a passion for solving complex problems. I recently graduated from General Assembly&apos;s Software Engineering Immersive program, where I honed my skills in full-stack development, building dynamic applications, and collaborating with teams to create impactful, sustainable solutions.</p>

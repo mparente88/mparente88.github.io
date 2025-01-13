@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Autoplay } from "swiper/modules"
+import { Navigation, FreeMode } from "swiper/modules"
 import "swiper/css"
 import "swiper/css/navigation"
 
@@ -47,19 +47,24 @@ export default function Endorsements() {
 
       <Swiper
         spaceBetween={20}
-        modules={[Navigation, Autoplay]}
+        modules={[Navigation, FreeMode]}
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         }}
         loop={true}
-        freeMode={true}
+        freeMode={{
+          enabled: true,
+          momentum: false,
+          sticky: false,
+        }}
         autoplay={false}
-        touchStartPreventDefault={true}
+        touchReleaseOnEdges={true}
+        slidesPerView="auto"
         breakpoints={{
-          640: { slidesPerView: 0.5 },
-          768: { slidesPerView: 0.5 },
-          1024: { slidesPerView: 4 },
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
         }}
       >
         {endorsements.map((endorsement, index) => (
