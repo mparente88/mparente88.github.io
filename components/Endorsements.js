@@ -30,6 +30,11 @@ export default function Endorsements() {
       title: "Software Engineer",
       feedback: "She was constantly teaching herself new techniques and technologies... putting herself and her projects above and beyond expectations. She consistently put the most hours into her projects and delivered projects that really pushed the requested technology to the limit of its capabilities.",
     },
+    {
+      name: "Michael Doyle",
+      title: "Software Engineer",
+      feedback: "I was often amazed by the amount of detail and functionality that she put into the projects. Each piece she made was incredibly styled and had a wonderful sense of her personality. She was meticulous in thinking what the project would look like for the end user, and taught herself a lot of code... to ensure that she could get features working.",
+    },
   ]
 
   return (
