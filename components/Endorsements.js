@@ -52,6 +52,8 @@ export default function Endorsements() {
           prevEl: ".swiper-button-prev",
         }}
         loop={true}
+        freeMode={true}
+        freemodesticky={true}
         autoplay={{
           delay: 3000,
           disableOnInteraction: true,
