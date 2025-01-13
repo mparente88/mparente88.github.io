@@ -40,6 +40,7 @@ export default function Endorsements() {
   return (
     <section id="endorsements" className="endorsements section">
       <h2>Endorsements</h2>
+      <span>Please Swipe Through</span>
       {/* Custom Navigation Buttons */}
       <div className="swiper-button-prev"></div>
       <div className="swiper-button-next"></div>
@@ -53,15 +54,12 @@ export default function Endorsements() {
         }}
         loop={true}
         freeMode={true}
-        freemodesticky={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: true,
-        }}
+        autoplay={false}
+        touchStartPreventDefault={true}
         breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
+          640: { slidesPerView: 0.5 },
+          768: { slidesPerView: 0.5 },
+          1024: { slidesPerView: 4 },
         }}
       >
         {endorsements.map((endorsement, index) => (
