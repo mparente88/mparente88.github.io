@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section id="about" className="about section">
       <div className="about-container">
-        <Image src="/profile-placeholder.png" alt="Profile" width={150} height={150} className="profile-img" />
+        <Image src="/profilePicture.png" alt="Profile" width={150} height={150} className="profile-img" />
         <div className="about-details">
           <h2>About Me</h2>
           <p>Hi! I&apos;m Molly, a software engineer with a background in teaching and a passion for solving complex problems. I recently graduated from General Assembly&apos;s Software Engineering Immersive program, where I honed my skills in full-stack development, building dynamic applications, and collaborating with teams to create impactful, sustainable solutions.</p>

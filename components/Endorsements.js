@@ -35,19 +35,21 @@ export default function Endorsements() {
   return (
     <section id="endorsements" className="endorsements section">
       <h2>Endorsements</h2>
+      {/* Custom Navigation Buttons */}
+      <div className="swiper-button-prev"></div>
+      <div className="swiper-button-next"></div>
+
       <Swiper
-        spaceBetween={30}
+        spaceBetween={20}
         modules={[Navigation, Autoplay]}
-        navigation
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }}
         loop={true}
         autoplay={{
           delay: 3000,
           disableOnInteraction: true,
-        }}
-        onAutoplayStop={(swiper) => {
-          if (swiper.autoplay.running) {
-            swiper.autoplay.stop()
-          }
         }}
         breakpoints={{
           640: { slidesPerView: 1 },
