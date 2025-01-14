@@ -285,7 +285,7 @@ a:hover {
 
 .project-image {
   flex: 1;
-  max-width: 200px;
+  max-width: 100px;
   height: auto;
   overflow: visible;
   transform: translateX(-25px);

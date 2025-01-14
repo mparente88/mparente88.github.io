@@ -5,7 +5,8 @@ import type { NextConfig } from "next"
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
-  assetPrefix: "https://mparente88.github.io",
+  basePath: "/mparente88.github.io",
+  assetPrefix: "/mparente88.github.io",
   images: {
     unoptimized: true,
   },
