@@ -285,10 +285,9 @@ a:hover {
 
 .project-image {
   flex: 1;
-  max-width: 100px;
+  max-width: 200px;
   height: auto;
   overflow: visible;
-  transform: translateX(-25px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -297,7 +296,7 @@ a:hover {
 
 .project-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 8px;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
