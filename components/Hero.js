@@ -1,11 +1,10 @@
 import React, { useEffect, useRef } from "react"
 import Typed from "typed.js"
 import Image from "next/image"
-import { useRouter } from "next/router"
+import Link from "next/link"
 
 export default function Hero() {
   const typedRef = useRef(null)
-  const router = useRouter()
 
   useEffect(() => {
     const options = {
@@ -39,8 +38,12 @@ export default function Hero() {
         </button>
       </div>
       <div>
-        <button onClick={() => router.push("/projects")}>View Projects</button>
-        <button onClick={() => router.push("/contact")}>Contact Me</button>
+        <Link href="/projects" passHref>
+          <button>View Projects</button>
+        </Link>
+        <Link href="/contact" passHref>
+          <button>Contact Me</button>
+        </Link>
       </div>
     </section>
   )
