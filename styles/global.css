@@ -286,6 +286,7 @@ a:hover {
 .project-image {
   flex: 1;
   max-width: 200px;
+  margin: 5px;
   height: auto;
   overflow: visible;
   display: flex;
