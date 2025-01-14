@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from "react"
 import Typed from "typed.js"
 import Image from "next/image"
+import { useRouter } from "next/router"
 
 export default function Hero() {
   const typedRef = useRef(null)
+  const router = useRouter()
 
   useEffect(() => {
     const options = {
