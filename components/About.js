@@ -1,12 +1,15 @@
 import Image from "next/image"
+import { useRouter } from "next/router"
 
 export default function About() {
+  const router = useRouter()
+
   return (
     <section id="about" className="about section">
       <div className="about-container">
-        <Image src="/profilePicture.png" alt="Profile" width={150} height={150} className="profile-img" />
+        <Image src={`${router.basePath}/profilePicture.png`} alt="Profile" width={150} height={150} className="profile-img" />
         <span>
-          <a href="/MollyParenteResume.pdf" download className="btn">
+          <a href={`/MollyParenteResume.pdf`} download className="btn">
             Download My Resume
           </a>
         </span>
