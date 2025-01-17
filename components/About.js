@@ -6,7 +6,7 @@ export default function About() {
       <div className="about-container">
         <Image src="/profilePicture.png" alt="Profile" width={150} height={150} className="profile-img" />
         <span>
-          <a href="/MollyParenteResume.pdf" download className="btn">
+          <a href="/MollyParenteResume1-17-2025.pdf" download className="btn">
             Download My Resume
           </a>
         </span>

@@ -32,7 +32,7 @@ export default function Hero() {
       </p>
       <div>
         <button>
-          <a href="/MollyParenteResume.pdf" download className="btn">
+          <a href="/MollyParenteResume1-17-2025.pdf" download className="btn">
             Download My Resume
           </a>
         </button>
